@@ -2,5 +2,5 @@ name: Xinyi Chen
 studentNumber: z5284428
 officialEmail: z5284428@unsw.edu.au
 contactEmail:
-  firstBit: Xinyi.Chen
-  otherBit: whereIwork.com
+  firstBit: Xinyi.Chen # this avoids spam, the @ is implied
+  otherBit: gmail.com
