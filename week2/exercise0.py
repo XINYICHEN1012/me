@@ -7,7 +7,6 @@ The command to run the tests is:
 
 python ../course/week2/tests.py
 
-
 In each function, where you see:
 
     the_answer = None

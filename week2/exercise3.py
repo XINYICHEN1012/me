@@ -7,8 +7,8 @@ def is_odd(a_number):
 
     Look into modulo division using the '%' operator as one way of doing this.
     """
-    answer = a_number % 2 == 1
-    return answer
+    number = a_number % 2 == 1
+    return number
 
 
 def fix_it(moves=True, should_move=True):
@@ -32,7 +32,7 @@ def fix_it(moves=True, should_move=True):
         return "Duct Tape"
     elif not moves and should_move:
         return "WD-40"
-    elif not move and not should_move:
+    elif not moves and not should_move:
         return "No Problem"
 
 
@@ -44,8 +44,8 @@ def loops_1a():
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
     star_list = []
-    for i in range[10]:
-        star_list.append("*")
+    for i in range(10):
+        star_list.append('*')
     return star_list
 
 
@@ -56,10 +56,11 @@ def loops_1c(number_of_items=5, symbol="#"):
     string with exacly one symbol in it.
     E.g.: ['#', '#', '#', '#', '#']
     """
-    string_list = [symbol] * number_of_items
-    return string_list_b
-
-
+    star_list = []
+    for i in range(number_of_items):
+        star_list.append(symbol)
+    return star_list
+    
 
 def loops_2():
     """Make a big square starfield.
@@ -79,16 +80,13 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
           ]
     """
-    star_square = []
-    for j in range(10):
-         star_list= []
-         for i in range(10):
-             star_list.append("*")
-        star_square.append(star_list)
-
-
-    return star_square
-
+    star_list =[]
+    for i in range(10):
+        x =[]
+        for j in range(10):
+            x.append('*')
+        star_list.append(x)
+    return star_list
 
 def loops_3():
     """Make a rising block of numbers.
@@ -110,14 +108,14 @@ def loops_3():
     So for every step produced by `for i in range(10):` i is a different number
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
-    """
+    """ 
     number_square = []
-    for i in range(0,10):
+    for i in range(10):
         x = []
         for j in range(10):
             x.append(str(i))
         number_square.append(x)
- return number_square
+    return number_square
 
 
 def loops_4():
@@ -137,13 +135,13 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-        list1 = []
-    for a in range(10):
-        list2 = []
-        for aa in range(10):
-            list2.append(str(aa))
-        list1.append(list2)
-    return list1
+    number_list_all= []
+    for i in range(10):
+        number_list= []
+        for ii in range(10):
+            number_list.append(str(ii))
+        number_list_all.append(number_list)
+    return number_list_all
 
 
 def loops_5():
@@ -170,13 +168,13 @@ def loops_5():
         "There are {} green bottles".format(8)
     you'll come to see the pros and cons of each over time.
     """
-    list_a = []
+    list_all =[]
     for i in range(10):
-        list_b = []
+        x = []
         for j in range(5):
-           listb.append("(" + "i" + str(i) + "," + " " + "j" + str(j) + ")")
-        list_a.append(list_b)
-    return list_a
+            x.append("(" + "i"+ str(i) + ","+"j"+str(j)+")")
+        list_all.append(x)
+    return list_all
 
 
 
@@ -203,8 +201,8 @@ def loops_6():
     x = []
     for i in range(10):
         y = []
-        for j in range(i + 1)
-        y.append(str(j))
+        for j in range(i + 1):
+            y.append(str(j))
         x.append(y)
 
     return x
@@ -232,17 +230,17 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    row = []
-    for i in range(1 , 6):
-        column = []
-        for j in range(0 , 5 - i):
-            column.append(" ")
-            for j in range(6 - i ,((5 - i + 1) + 2 * i) - 1):
-                column.append("*")
-            for j in range((((5 - i + 1) + 2 * i) - 1), 11):
-                column.append(" ")
-    row.append(column)
-    return row
+    star_list = []
+    for i in range(1,6):
+        another_list = []
+        for j in range(0, 5-i):
+            another_list.append(" ")
+        for j in range(6-i , ((5-i+1)+2*i)-1):
+            another_list.append("*")
+        for j in range(((5-i+1)+2*i)-1,11):
+            another_list.append(" ")
+        star_list.append(another_list)
+    return star_list
 
 
 def lp(some_kind_of_list, exercise_name):

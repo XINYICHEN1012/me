@@ -12,14 +12,14 @@ def loop_ranger(start, stop=None, step=1):
     The look up the docs for range(), you can answer this with just the range 
     function, but we'd like you to do it the long way, probably using a loop.
     """
-    the_numbers = []
+    the_number = [] 
     x = start
     while x < stop:
         print(x)
-        the_numbers.append(x)
+        the_number.append(x)
         x = x + step
+    return the_number
 
-    return the_numbers
 
 
 def lone_ranger(start, stop, step):
@@ -27,8 +27,13 @@ def lone_ranger(start, stop, step):
 
     Look up the docs for range() and wrap it in a 1:1 way
     """
-    return None
-
+    the_number = []
+    x = start
+    while x < stop:
+        print(x)
+        the_number.append(x)
+        x = x + step
+    return the_number
 
 def two_step_ranger(start, stop):
     """Make a range that steps by 2.
@@ -36,7 +41,13 @@ def two_step_ranger(start, stop):
     Sometimes you want to hide complexity.
     Make a range function that always has a step size of 2
     """
-    return None
+    the_number =[]
+    x = start
+    while x < stop:
+        print(x)
+        the_number.append(x)
+        x = x + 2
+    return the_number
 
 
 def stubborn_asker(low, high):
@@ -47,7 +58,17 @@ def stubborn_asker(low, high):
 
     Look up the docs for input
     """
-    return None
+    number_input = int(input("input number:"))
+    while not(low < number_input < high):
+        if number_input < low:
+            print("try higher number")
+        if number_input > high:
+            print("try lower number")
+    while number_input > low and number_input < high:
+        print("ok")
+        return number_input
+    number_input = int(input("input number:"))
+    return number_input
 
 
 def not_number_rejector(message):
