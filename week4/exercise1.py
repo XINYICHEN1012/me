@@ -146,7 +146,7 @@ def diarist():
         if "M10 P1" in line:
             numcount += 1
     
-    lasers = open(LOCAL + "/lasers.pew", "w")
+    lasers = open(LOCAL + "/lasers.pew", 'w')
     lasers.write(str(numcount))
     lasers.close()
 
