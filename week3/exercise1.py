@@ -58,17 +58,18 @@ def stubborn_asker(low, high):
 
     Look up the docs for input
     """
-    number_input = int(input("input number:"))
-    while not(low < number_input < high):
+    number_input = int(input("input a number:"))
+    while not (low < number_input < high):
         if number_input < low:
-            print("try higher number")
+            print("try higher")
         if number_input > high:
-            print("try lower number")
-    while number_input > low and number_input < high:
-        print("ok")
-        return number_input
-    number_input = int(input("input number:"))
+            print("try lower")
+        if number_input > low and number_input < high:
+            print ("right")
+            return number_input
+        number_input = int(input("input a number:"))
     return number_input
+
 
 
 def not_number_rejector(message):
@@ -78,7 +79,10 @@ def not_number_rejector(message):
     (e.g. "cow", "six", "8!") then throw it out and ask for an actual number.
     When you do get a number, return it.
     """
-    return None
+    try:
+        return int(message)
+    except:
+        return message
 
 
 def super_asker(low, high):
@@ -89,7 +93,23 @@ def super_asker(low, high):
     Try to call at least one of the other functions to minimise the
     amount of code.
     """
-    return None
+    number_input = not_number_rejector(input("input:"))
+    try:
+        return int(input("input:"))
+    except:
+        return not_number_rejector(input("input:"))
+    while not (low < number_input< high):
+        if number_input < low:
+            print("try higher")
+        if number_input > high:
+            print("try lower")
+        if number_input > low and number_input < high:
+            print ("right")
+            return number_input
+        number_input = int(input("input a number:"))
+    return number_input
+  
+
 
 
 if __name__ == "__main__":
