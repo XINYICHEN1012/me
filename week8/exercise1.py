@@ -189,17 +189,10 @@ def make_filler_text_dictionary():
     """
 
     import requests
-
     url = "https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength="
     wd = {}
     for i in range(3,8,1):
-        x = url + str (i)
-        wd[i] = []
-    for a in range(3):
-        r = requests.get(url).text
-        wd[i].append(r)        
-
-
+     
     return wd
 
 
