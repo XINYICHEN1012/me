@@ -175,6 +175,7 @@ def loops_5():
             x.append("(" + "i"+ str(i) + ","+"j"+str(j)+")")
         list_all.append(x)
     return list_all
+    
 
 
 

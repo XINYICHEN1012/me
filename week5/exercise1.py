@@ -62,30 +62,30 @@ def countdown(message, start, stop, completion_message):
 # The stub functions are made for you, and each one is tested, so this should
 # hand hold quite nicely.
 def calculate_hypotenuse(base, height):
-    pass
+    return (base ** 2 + height ** 2)
 
 
-def calculate_area(base, height):
-    pass
+def calculate_area(base:float, height:float) -> float :
+    return base * height / 2
 
 
 def calculate_perimeter(base, height):
-    pass
+    return base + height + calculate_hypotenuse(base, height) 
 
 
 def calculate_aspect(base, height):
-    pass
+    return 
 
 
 # Make sure you reuse the functions you've already got
 # Don't reinvent the wheel
 def get_triangle_facts(base, height, units="mm"):
     return {
-        "area": None,
-        "perimeter": None,
+        "area": calculate_area(base, height),
+        "perimeter": calculate_perimeter(base, height),
         "height": None,
         "base": None,
-        "hypotenuse": None,
+        "hypotenuse": calculate_hypotenuse(base, height),
         "aspect": None,
         "units": None,
     }
