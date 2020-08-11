@@ -28,11 +28,11 @@ def fix_it(moves=True, should_move=True):
     """
     if moves == should_move:
         return "No Problem"
-    elif moves and not should_move:
-        return "Duct Tape"
     elif not moves and should_move:
+        return "Duct Tape"
+    elif moves and not should_move:
         return "WD-40"
-    elif not moves and not should_move:
+    else:
         return "No Problem"
 
 
@@ -172,7 +172,7 @@ def loops_5():
     for i in range(10):
         x = []
         for j in range(5):
-            x.append("(" + "i"+ str(i) + ","+"j"+str(j)+")")
+            x.append("(" + "i"+ str(i) + ", j"+str(j)+")")
         list_all.append(x)
     return list_all
     
@@ -238,7 +238,7 @@ def loops_7():
             another_list.append(" ")
         for j in range(6-i , ((5-i+1)+2*i)-1):
             another_list.append("*")
-        for j in range(((5-i+1)+2*i)-1,11):
+        for j in range(((5-i+1)+2*i)-1,10):
             another_list.append(" ")
         star_list.append(another_list)
     return star_list
